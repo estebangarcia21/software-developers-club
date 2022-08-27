@@ -1,0 +1,45 @@
+.container {
+  padding: 42px 32px;
+  text-transform: uppercase;
+  color: #eeeeee;
+}
+
+.header {
+  display: flex;
+
+  .title {
+    color: #75e5af;
+    line-height: 1.4;
+    font-weight: bold;
+
+    font-size: 32px;
+    flex: 3;
+    letter-spacing: 0.08em;
+  }
+
+  .reactLogo {
+    display: flex;
+    flex: 1;
+
+    align-items: center;
+    justify-content: center;
+
+    > img {
+      width: 63px;
+      height: 55px;
+    }
+  }
+}
+
+.subHeader {
+  margin-top: 64px;
+}
+
+.commandLineText {
+  color: #3a3a3a;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 13px;
+  text-transform: none;
+}
