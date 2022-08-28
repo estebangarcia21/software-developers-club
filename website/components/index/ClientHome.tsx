@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 import { animated, SpringValues } from 'react-spring';
 import useAnimations from '../../hooks/index/useAnimations';
 import styles from '../../styles/Home.module.scss';
