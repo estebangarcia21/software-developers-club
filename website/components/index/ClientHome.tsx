@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { animated, SpringValues } from 'react-spring';
 import useAnimations from '../../hooks/index/useAnimations';
 import styles from '../../styles/Home.module.scss';
@@ -25,6 +26,9 @@ const ClientHome = () => {
 
   return (
     <div>
+      <Head>
+        <title>Franklin Software Developers</title>
+      </Head>
       <div className={styles.container}>
         <ContentContainer root>
           <header className={styles.header}>
