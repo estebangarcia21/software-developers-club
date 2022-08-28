@@ -6,7 +6,7 @@ import {
   useSpring,
   UseSpringProps,
   useSpringRef
-} from 'react-spring';
+} from '@react-spring/web';
 
 const useAnimations = (
   typingAnim0Len: number
@@ -49,7 +49,7 @@ const useAnimations = (
     ref: lastAnimRef
   });
 
-  const upwardsAnimation = (): [SpringValues, SpringRef] => {
+  const useUpwardsAnimation = (): [SpringValues, SpringRef] => {
     const ref = useSpringRef();
 
     const props: UseSpringProps = {
@@ -67,9 +67,9 @@ const useAnimations = (
     return [useSpring(props), ref];
   };
 
-  const [u0, u0ref] = upwardsAnimation();
-  const [u1, u1ref] = upwardsAnimation();
-  const [u2, u2ref] = upwardsAnimation();
+  const [u0, u0ref] = useUpwardsAnimation();
+  const [u1, u1ref] = useUpwardsAnimation();
+  const [u2, u2ref] = useUpwardsAnimation();
 
   useChain(
     [titleAnimRef, u0ref, u1ref, typingAnimRef, lastAnimRef, u2ref],
