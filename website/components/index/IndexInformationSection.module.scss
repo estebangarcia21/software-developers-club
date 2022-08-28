@@ -1,4 +1,4 @@
-$divider-color: #161616;
+@import 'styles/theme.scss';
 
 .container {
   display: flex;
@@ -6,7 +6,7 @@ $divider-color: #161616;
   height: max-content;
   border-radius: 8px;
   padding: 24px 0;
-  border: 1px solid $divider-color;
+  border: 1px solid $border-color;
 }
 
 .boxShadow {
@@ -28,7 +28,7 @@ $divider-color: #161616;
 }
 
 .divider {
-  border-top: 1px solid $divider-color;
+  border-top: 1px solid $border-color;
 }
 
 .textContent {
@@ -37,7 +37,7 @@ $divider-color: #161616;
   > h1 {
     font-size: 16px;
     font-weight: bold;
-    color: #eeeeee;
+    color: $soft-white;
   }
 
   > p {

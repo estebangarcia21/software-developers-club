@@ -1,0 +1,11 @@
+$border-color: #161616;
+
+$primary-color: #75e5af;
+$secondary-color: #4fd2e4;
+
+$soft-white: #eeeeee;
+
+@mixin terminalText() {
+  color: #282828;
+  font-size: 14px;
+}

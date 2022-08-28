@@ -1,15 +1,15 @@
-$divider-color: #161616;
+@import 'styles/theme.scss';
 
 .container {
   text-transform: uppercase;
-  color: #eeeeee;
+  color: $soft-white;
 }
 
 .header {
   display: flex;
 
   .title {
-    color: #75e5af;
+    color: $primary-color;
     line-height: 1.4;
     font-weight: bold;
 
@@ -34,14 +34,8 @@ $divider-color: #161616;
 }
 
 .subtitle {
-  &Container {
-  }
-
   max-width: 34ch;
   font-weight: 700;
-}
-
-.informationSections {
 }
 
 .divider {
@@ -61,7 +55,7 @@ $divider-color: #161616;
 
   > hr {
     border: none;
-    border-bottom: 1px solid $divider-color;
+    border-bottom: 1px solid $border-color;
     width: 100%;
   }
 }
