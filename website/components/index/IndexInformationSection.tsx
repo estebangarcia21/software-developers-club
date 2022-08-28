@@ -22,23 +22,28 @@ const IndexInformationSection = ({
   boxShadowColor
 }: IndexInformationSectionProps) => {
   const contents = [
-    <div
-      className={classNames(styles.textContent, {
-        [styles.rightMargin]: reversed,
-        [styles.leftMargin]: !reversed
-      })}
-    >
-      <h1>{title}</h1>
-      <p>{children}</p>
-    </div>,
-    <div
-      className={classNames(styles.visualContent, {
-        [styles.rightMargin]: !reversed,
-        [styles.leftMargin]: !reversed
-      })}
-    >
-      {image && <img src={image[0]} alt={image[1]} />}
-    </div>
+    () => (
+      <div
+        className={classNames(styles.textContent, {
+          [styles.rightMargin]: reversed,
+          [styles.leftMargin]: !reversed
+        })}
+      >
+        <h1>{title}</h1>
+        <p>{children}</p>
+      </div>
+    ),
+    () => (
+      <div
+        className={classNames(styles.visualContent, {
+          [styles.rightMargin]: !reversed,
+          [styles.leftMargin]: !reversed
+        })}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        {image && <img src={image[0]} alt={image[1]} />}
+      </div>
+    )
   ];
 
   return (
@@ -49,7 +54,9 @@ const IndexInformationSection = ({
           styles[`boxShadow${boxShadowColor}`]
         )}
       >
-        {reversed ? contents.reverse() : contents}
+        {(reversed ? contents.reverse() : contents).map((C, i) => (
+          <C key={i} />
+        ))}
       </div>
     </ContentContainer>
   );

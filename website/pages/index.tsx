@@ -111,8 +111,8 @@ const Home: NextPage = () => {
             boxShadowColor="Aqua"
             image={['/azure.png', 'Picture of the react framework.']}
           >
-            DEVELOPERS UPLOAD APPLICATIONS TO "THE CLOUD", A COLLECTION OF
-            SERVERS MANAGED BY THE PROVIDER.
+            DEVELOPERS UPLOAD APPLICATIONS TO &quot;THE CLOUD&quot;, A
+            COLLECTION OF SERVERS MANAGED BY THE PROVIDER.
             <br />
             <br />
             LEARN HOW TO DEPLOY APPLICATIONS TO THE WEB USING INDUSTRY-STANDARD
