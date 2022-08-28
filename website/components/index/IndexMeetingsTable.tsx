@@ -16,7 +16,11 @@ const Row = ({ day, location, time }: RowProps) => {
     <>
       <li className={styles.row}>{day}</li>
       <li className={styles.row}>{location}</li>
-      <li className={styles.row}>{`${time[0]} -> ${time[1]}`}</li>
+      <li className={styles.timeRow}>
+        <span>{time[0]}</span>
+        <span>{'->'}</span>
+        <span>{time[1]}</span>
+      </li>
     </>
   );
 };
@@ -25,10 +29,13 @@ const IndexMeetingsTable = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <p className={styles.queryText}>
-          {'>'} DESCRIBE{' '}
-          <span className={styles.emphasized}>CLUB MEETINGS</span>;
-        </p>
+        <div className={styles.queryTextContainer}>
+          <div className={styles.terminal}>{'>'}</div>
+          <span className={styles.text}>
+            DESCRIBE
+            <span className={styles.emphasized}> CLUB MEETINGS</span>;
+          </span>
+        </div>
 
         <div className={styles.infoTab}>
           <p>EVERY WEEK</p>

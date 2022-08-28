@@ -28,10 +28,8 @@ const ClientHome = () => {
       <div className={styles.container}>
         <ContentContainer root>
           <header className={styles.header}>
-            <div className={styles.reactLogo}>
-              <animated.h1 style={title} className={styles.title}>
-                SOFTWARE DEVELOPERS CLUB
-              </animated.h1>
+            <div className={styles.title}>
+              <animated.h1 style={title}>SOFTWARE DEVELOPERS CLUB</animated.h1>
             </div>
 
             <div className={styles.reactLogo}>

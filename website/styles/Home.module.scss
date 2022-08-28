@@ -14,12 +14,13 @@ $divider-color: #161616;
     font-weight: bold;
 
     font-size: 32px;
-    flex: 3;
+    flex: 1;
     letter-spacing: 0.08em;
   }
 
   .reactLogo {
-    display: flex;
+    display: none;
+
     flex: 1;
 
     align-items: center;
@@ -122,6 +123,14 @@ $divider-color: #161616;
     :first-child {
       margin-right: 24px;
       margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .header {
+    .reactLogo {
+      display: flex;
     }
   }
 }

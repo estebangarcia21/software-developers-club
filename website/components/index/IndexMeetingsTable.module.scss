@@ -18,6 +18,9 @@ $border-color: #161616;
   font-size: 12px;
   border: 0.5px solid $border-color;
   font-weight: $font-weight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .headerRow {
@@ -26,6 +29,14 @@ $border-color: #161616;
 
 .row {
   @include row(300);
+}
+
+.timeRow {
+  @include row(300);
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .header {
@@ -40,6 +51,10 @@ $emphasize-color: #4fd2e4;
   background-color: $emphasize-color;
   margin-right: 25px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   $r: 4px;
   border-top-left-radius: $r;
   border-top-right-radius: $r;
@@ -51,13 +66,28 @@ $emphasize-color: #4fd2e4;
   }
 }
 
-.queryText {
+.queryTextContainer {
   flex: 3;
-  color: #282828;
   text-transform: none;
+  display: flex;
+  flex-direction: row;
 
-  .emphasized {
-    font-weight: bold;
-    color: $emphasize-color;
+  color: #282828;
+
+  .terminal {
+    margin-right: 4px;
+  }
+
+  .text {
+    .emphasized {
+      font-weight: bold;
+      color: $emphasize-color;
+    }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .timeRow {
+    flex-direction: row;
   }
 }
