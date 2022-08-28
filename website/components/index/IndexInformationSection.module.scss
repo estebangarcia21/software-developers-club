@@ -1,0 +1,70 @@
+$divider-color: #161616;
+
+.container {
+  display: flex;
+  margin: 64px 0;
+  height: max-content;
+  border-radius: 8px;
+  padding: 24px 0;
+  border: 1px solid $divider-color;
+}
+
+.boxShadow {
+  @mixin boxShadow($a, $b: rgba(0, 0, 0, 0.3)) {
+    box-shadow: $a 0px 30px 60px -12px, $b 0px 18px 36px -18px;
+  }
+
+  &Aqua {
+    @include boxShadow(rgba(27, 74, 106, 0.422));
+  }
+
+  &Orange {
+    @include boxShadow(rgba(106, 64, 27, 0.422));
+  }
+
+  &Green {
+    @include boxShadow(rgba(27, 106, 81, 0.422));
+  }
+}
+
+.divider {
+  border-top: 1px solid $divider-color;
+}
+
+.textContent {
+  flex: 2;
+
+  > h1 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #eeeeee;
+  }
+
+  > p {
+    font-size: 12px;
+    margin-top: 16px;
+    color: #929292;
+  }
+}
+
+.visualContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 24px;
+
+  > img {
+    width: 64px;
+  }
+}
+
+$text-margin: 24px;
+
+.leftMargin {
+  margin-left: $text-margin;
+}
+
+.rightMargin {
+  margin-right: $text-margin;
+}

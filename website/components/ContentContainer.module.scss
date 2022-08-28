@@ -1,0 +1,17 @@
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.content {
+  padding: 0 32px;
+}
+
+$padding: 42px;
+.rootContent {
+  padding-top: $padding;
+}
+
+.endContent {
+  padding-bottom: $padding;
+}

@@ -1,0 +1,63 @@
+$border-color: #161616;
+
+.container {
+  margin-top: 54px;
+}
+
+.table {
+  display: grid;
+  min-width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid $border-color;
+  text-align: center;
+}
+
+@mixin row($font-weight: 400) {
+  text-transform: uppercase;
+  padding: 8px;
+  font-size: 12px;
+  border: 0.5px solid $border-color;
+  font-weight: $font-weight;
+}
+
+.headerRow {
+  @include row(700);
+}
+
+.row {
+  @include row(300);
+}
+
+.header {
+  display: flex;
+  font-size: 12px;
+}
+
+$emphasize-color: #4fd2e4;
+
+.infoTab {
+  flex: 2;
+  background-color: $emphasize-color;
+  margin-right: 25px;
+
+  $r: 4px;
+  border-top-left-radius: $r;
+  border-top-right-radius: $r;
+  text-align: center;
+
+  > p {
+    color: black;
+    font-weight: bold;
+  }
+}
+
+.queryText {
+  flex: 3;
+  color: #282828;
+  text-transform: none;
+
+  .emphasized {
+    font-weight: bold;
+    color: $emphasize-color;
+  }
+}
