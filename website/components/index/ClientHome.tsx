@@ -19,7 +19,7 @@ const SUBTITLE =
 const INSTAGRAM_LINK = 'https://www.instagram.com/franklinsoftwaredevs/';
 const DISCORD_LINK = 'https://discord.gg/ruRQUGSDQy';
 
-const ClientHome: NextPage = () => {
+const ClientHome = () => {
   const [typing, [title, last, [up0, u1, up2]]] = useAnimations(
     SUBTITLE.length
   );
