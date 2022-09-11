@@ -38,7 +38,7 @@ const IndexMeetingsTable = () => {
         </div>
 
         <div className={styles.infoTab}>
-          <p>EVERY WEEK</p>
+          <p>EVERY OTHER WEEK</p>
         </div>
       </div>
 
@@ -47,7 +47,7 @@ const IndexMeetingsTable = () => {
         <li className={styles.headerRow}>LOCATION</li>
         <li className={styles.headerRow}>TIME</li>
 
-        <Row day="tuesday" location="HG1" time={['3:20', '4:30']} />
+        <Row day="tuesday" location="HG1" time={['3:40', '4:40']} />
         <Row day="thursday" location="zoom" time={['4:30', '6:00']} />
       </ul>
     </div>
